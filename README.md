@@ -33,9 +33,6 @@ Projeto desenvolvido para praticar **JavaScript**, **manipulação do DOM** e **
 ---
 
 ## 📂 Estrutura do Projeto
-Listagem de caminhos de pasta para o volume Windows
-O n·mero de sÚrie do volume Ú 80E3-7519
-C:.
 |   estrutura.txt
 |   index.html
 |   README.md
