@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Painel Interativo do Usuário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Painel do Usuário</h1>
+
+    <div id="painel"
+         onmouseenter="entrar()"
+         onmouseout="sair()">
+        Aguardando ação
+    </div>
+
+    <button onclick="ativar()">Ativar</button>
+    <button onclick="desativar()">Desativar</button>
+
+    <p id="status">Status: Desativado</p>
+
+    <script src="script.js"></script>
+</body>
+</html>
