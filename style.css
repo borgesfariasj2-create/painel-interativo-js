@@ -1,23 +1,341 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-#painel {
-    width: 260px;
-    height: 120px;
-    margin: 20px auto;
-    background-color: lightgray;
-    color: black;
+/* ================= FUNDO DO SITE ================= */
+body {
+    min-height: 100vh;
+    background-image: url("/assets/background.png");
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(2px);
+    z-index: -1;
+}
+
+/* ================= HEADER ================= */
+.header {
+    height: 64px;
+    background: rgba(0, 0, 0, 0.35);
     display: flex;
     align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    border-radius: 8px;
+    justify-content: space-between;
+    padding: 0 24px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    position: relative;
+    z-index: 10;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+    backdrop-filter: blur(6px);
 }
 
-button {
-    padding: 10px 15px;
-    margin: 5px;
+/* Logo */
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-area img {
+    width: 48px;
+    border-radius: 10px;
+}
+
+.logo-area h1 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Busca */
+.search-area {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.search-area input {
+    width: 100%;
+    max-width: 420px;
+    padding: 8px 14px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+/* Espaço direito */
+.right-area {
+    width: 200px;
+}
+
+/* ================= SEÇÕES ABOUT ================= */
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 100px;
+    padding: 100px 6%;
+}
+
+/* Inversão da segunda seção */
+.about-reverse {
+    flex-direction: row-reverse;
+}
+
+/* ================= IMAGEM ================= */
+.about-image {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 520px;
+    border-radius: 50px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.459);
+    justify-content: flex-start;
+}
+
+/* Slide específico */
+#slide {
+    transition: opacity 0.5s ease;
+    justify-content: start;
+}
+
+/* ================= TEXTO ================= */
+.about-text {
+    flex: 1;
+    max-width: 10000pt;
+    justify-content: center;
+}
+
+.about-text h2 {
+    font-size: 36px;
+    margin-bottom: 0px;
+    color: #ffffff;
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #cccccc;
+}
+
+/* ================= SLIDER ================= */
+.slider-buttons {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+}
+
+.slider-buttons button {
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
     cursor: pointer;
 }
+
+.slider-buttons button:hover {
+    background: rgba(0, 0, 0, 0.85);
+}
+
+/* ================= RESPONSIVO ================= */
+@media (max-width: 900px) {
+    .about,
+    .about-reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        max-width: 100%;
+    }
+
+    .about-text h2 {
+        font-size: 28px;
+    }
+}
+
+/* ================= PRODUTOS ================= */
+
+.produtos {
+    padding: 100px 6%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    font-size: 25px;
+    color: #ffffff;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* ================= EMBED PRODUTO ================= */
+.product-embed {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    background: rgba(0,0,0,0.45);
+    border-radius: 16px;
+    padding: 20px;
+    max-width: 420px;
+    backdrop-filter: blur(6px);
+}
+
+/* imagem */
+.product-embed img {
+    width: 140px;
+    border-radius: 12px;
+}
+
+/* info */
+.product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.product-info h3 {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+/* descrição */
+.product-desc {
+    font-size: 14px;
+    color: #cccccc;
+}
+
+/* preço */
+.product-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* botão */
+.product-btn {
+    margin-top: 6px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.product-btn:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+/* RESPONSIVO */
+@media (max-width: 480px) {
+    .product-embed {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .product-embed img {
+        width: 160px;
+    }
+}
+/* ================= PRODUTOS ================= */
+.produtos {
+    padding: 120px 6%;
+}
+
+.produtos h2 {
+    font-size: 36px;
+    margin-bottom: 48px;
+}
+
+/* GRID DOS PRODUTOS */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 1100px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* ================= SEÇÃO PRODUTOS ================= */
+.produtos {
+    display: flex;
+    flex-direction: column;   /* 🔥 força ficar em coluna */
+    align-items: center;  /* título alinhado à esquerda */
+    padding: 120px 6%;
+}
+
+/* título */
+.produtos h2 {
+    font-size: 36px;
+    margin-bottom: 48px;
+}
+
+/* grid dos produtos */
+.products-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+/* centraliza os cards dentro das colunas */
+.product-embed {
+    margin: 0 auto;
+}
+
+/* RESPONSIVO */
+@media (max-width: 1100px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .produtos {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.is-hidden {
+  display: none !important;
+}
+

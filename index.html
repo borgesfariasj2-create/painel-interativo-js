@@ -1,25 +1,129 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Painel Interativo do Usuário</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VÉRTICE</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Painel do Usuário</h1>
-
-    <div id="painel"
-         onmouseenter="entrar()"
-         onmouseout="sair()">
-        Aguardando ação
+<header class="header">
+    <div class="logo-area">
+        <img src="/assets/logo-teste.png" alt="Logo Vértice">
+        <h1>Vértice</h1>
     </div>
 
-    <button onclick="ativar()">Ativar</button>
-    <button onclick="desativar()">Desativar</button>
+    <div class="search-area">
+        <input type="text" id="searchInput" placeholder="Buscar produtos">
+    </div>
 
-    <p id="status">Status: Desativado</p>
+    <div class="right-area"></div>
+</header>
 
-    <script src="script.js"></script>
+<!-- ================= QUEM SOMOS ================= -->
+<section class="about">
+    <div class="about-image">
+        <img src="/assets/img1.png" alt="Apresentação da marca Vértice">
+    </div>
+
+    <div class="about-text">
+        <h2>Quem somos?</h2>
+        <p>
+            <strong>VÉRTICE</strong><br><br>
+            VÉRTICE é a expressão do essencial elevado ao mais alto nível.
+            Uma marca criada para quem entende que o verdadeiro luxo está na simplicidade,
+            na precisão e na identidade.<br><br>
+
+            Cada peça é desenvolvida com atenção absoluta aos detalhes —
+            do caimento oversized impecável à escolha de tecidos,
+            passando por acabamentos limpos e atemporais.
+            Nada é excessivo. Tudo é intencional.<br><br>
+
+            <strong>VÉRTICE — Elevate your style.</strong>
+        </p>
+    </div>
+</section>
+
+<!-- ================= POR QUE ESCOLHER ================= -->
+<section class="about">
+    <div class="about-image">
+        <img src="/assets/vertice-pq.png" alt="Por que escolher a Vértice">
+    </div>
+
+    <div class="about-text">
+        <h2>Por que escolher a VÉRTICE?</h2>
+        <p>
+            Porque estilo não é excesso. É escolha.<br><br>
+
+            A VÉRTICE foi criada para quem busca mais do que uma peça de roupa:
+            busca identidade, presença e padrão elevado.
+            Cada detalhe é pensado para entregar uma experiência premium —
+            do tecido ao caimento, do design à sensação ao vestir.<br><br>
+
+            Nossas peças unem estética minimalista, conforto absoluto e acabamento impecável,
+            resultando em um visual sofisticado, atemporal e urbano.<br><br>
+
+            <strong>VÉRTICE é para quem sabe quem é.</strong><br>
+            E não precisa provar.
+        </p>
+    </div>
+</section>
+
+<!-- ================= PRODUTOS ================= -->
+<section class="produtos">
+    <h2>Nossos produtos</h2>
+
+    <div class="products-grid">
+
+        <!-- PRODUTO 1 -->
+        <div class="product-embed vertical"
+             id="produto-oversized"
+             data-name="camiseta oversized vertice preta">
+            <img src="/assets/produto 1.png" alt="Camiseta Oversized VÉRTICE">
+            <div class="product-info">
+                <h3>Camiseta Oversized VÉRTICE</h3>
+                <p class="product-desc">
+                    Minimalismo, conforto e presença em uma única peça.
+                </p>
+                <span class="product-price">R$ 129,90</span>
+                <button class="product-btn">Ver produto</button>
+            </div>
+        </div>
+
+        <!-- PRODUTO 2 -->
+        <div class="product-embed vertical"
+             id="produto-boxy"
+             data-name="camiseta boxy vertice">
+            <img src="/assets/produto 2.png" alt="Camiseta Boxy VÉRTICE">
+            <div class="product-info">
+                <h3>Camiseta Boxy VÉRTICE</h3>
+                <p class="product-desc">
+                    Minimalismo, conforto e presença em uma única peça.
+                </p>
+                <span class="product-price">R$ 129,90</span>
+                <button class="product-btn">Ver produto</button>
+            </div>
+        </div>
+
+        <!-- PRODUTO 3 -->
+        <div class="product-embed vertical"
+             id="produto-vertice"
+             data-name="camiseta vertice">
+            <img src="/assets/produto 3.png" alt="Camiseta VÉRTICE">
+            <div class="product-info">
+                <h3>Camiseta VÉRTICE</h3>
+                <p class="product-desc">
+                    Minimalismo, conforto e presença em uma única peça.
+                </p>
+                <span class="product-price">R$ 129,90</span>
+                <button class="product-btn">Ver produto</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>
